@@ -1,7 +1,5 @@
-/* Bao bọc toàn bộ trang, nền xám nhạt giống ảnh */
 .register-wrapper {
   min-height: 100vh;
-  background-color: #e2dfdb; /* Nền xám nhạt */
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -10,43 +8,42 @@
   padding: 20px;
 }
 
-/* Tiêu đề Đăng Ký ở trên cùng */
 .page-title {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
 }
 
-/* Container chính chia 2 cột */
 .register-container {
   display: flex;
   width: 800px;
   max-width: 100%;
-  border: 1px solid #333;
   background-color: #fff;
 }
 
-/* --- CỘT TRÁI (Banner đỏ) --- */
 .register-left {
   flex: 1;
   background-color: #d6645e;
-  padding: 40px 20px;
+  padding: 40px 20px; 
   display: flex;
   flex-direction: column;
   align-items: center;
   border-right: 1px solid #333;
+  
+  align-self: flex-start; 
+  
 }
 
 .register-left h2 {
   color: #333;
   text-align: center;
   font-size: 20px;
-  margin-bottom: 40px;
+  margin-top: 0; /* QUAN TRỌNG: Xóa khoảng trống thừa (margin mặc định) của thẻ h2 */
+  margin-bottom: 30px; /* Giảm một chút khoảng cách giữa chữ và logo */
   line-height: 1.4;
   font-weight: bold;
 }
 
-/* Khung tròn giả lập Logo KFT */
 .logo-circle {
   width: 200px;
   height: 200px;
@@ -75,11 +72,9 @@
   color: #aaa;
 }
 
-/* --- CỘT PHẢI (Form đăng ký) --- */
 .register-right {
   flex: 1;
   padding: 30px 40px;
-  background-color: #e2dfdb; /* Chỉnh màu nền bên phải khớp với ảnh nếu cần, hoặc để trắng. Ảnh của bạn có vẻ nền trong suốt hoặc xám nhạt giống wrapper */
 }
 
 .form-title {
@@ -103,7 +98,7 @@
 }
 
 .input-group input::placeholder {
-  color: #000; /* Màu chữ placeholder đen như trong ảnh */
+  color: #000; 
 }
 
 .password-wrapper {
@@ -119,7 +114,6 @@
   user-select: none;
 }
 
-/* Nút bấm Đăng Ký chính */
 .btn-main-register {
   width: 100%;
   padding: 10px;
@@ -193,7 +187,6 @@
   font-weight: bold;
   text-decoration: none;
 }
-/* --- CSS thêm cho phần Giới tính --- */
 .gender-group {
   display: flex;
   align-items: center;
@@ -212,7 +205,7 @@
 
 .gender-options {
   display: flex;
-  gap: 15px; /* Khoảng cách giữa Nam, Nữ, Khác */
+  gap: 15px; 
 }
 
 .gender-options label {
@@ -224,11 +217,18 @@
   cursor: pointer;
 }
 
-/* Đảm bảo nút radio (chấm tròn) không bị kéo dài do CSS cũ */
 .gender-options input[type="radio"] {
   width: auto;
   padding: 0;
   margin: 0;
   border: none;
   cursor: pointer;
+}
+.error-text {
+  color: #dc2626; 
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+  text-align: left;
+  font-style: italic;
 }
