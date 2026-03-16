@@ -56,7 +56,6 @@ const Register = () => {
 
   return (
     <div className="register-wrapper">
-      <h2 className="page-title">Đăng Ký</h2>
 
       <div className="register-container">
         <div className="register-left">
